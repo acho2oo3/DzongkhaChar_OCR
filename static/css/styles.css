@@ -1,0 +1,328 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css?family=Clash+Grotesk&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cabinet+Grotesk&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Space+Grotesk&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+/* Styles for the navigation bar */
+* {
+    box-sizing: border-box;
+    background-color: #000;
+    color: #fff;
+}
+
+body {
+    font-family: 'Clash Grotesk', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /* font-family: 'Cabinet Grotesk', sans-serif; */
+    font-family: 'Clash Grotesk', sans-serif;
+}
+
+p {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    /* font-family: 'Space Grotesk', sans-serif; */
+}
+
+.home__img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    object-fit: contain;
+    z-index: 0;
+}
+
+nav {
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    border: 1px solid transparent; /* Set initial border as transparent */
+    border-image: linear-gradient(to right, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5);
+    border-image-slice: 1;
+}
+
+section {
+    height: 100vh;
+}
+
+/* Styles for the hero banner */
+.hero-banner {
+    position: relative; /* Set position to relative */
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+}
+
+.centered-content {
+  position: relative; /* Set position to relative */
+  z-index: 1; /* Ensure content stays above the background */
+}
+
+/* Styles for the about section */
+.about {
+    position: relative;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the about box */
+.about-box {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 25px 40px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #3D59FF; /* Set initial border as transparent */
+    border-radius: 0px 0px 30px 0px;
+}
+
+.technology {
+    text-align: center;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Styles for the technology content */
+.technology-content {
+  text-align: left; /* Align text to the left */
+  width: 40%; /* Set width for text content */
+}
+
+/* Styles for the technology image */
+.technology-image {
+    width: 30%;
+}
+
+.team-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-member {
+    width: 25%; /* Adjust width as needed */
+    font-family: 'Cabinet Grotesk', sans-serif;
+}
+
+.team-member img {
+    height: 400px;
+    width: auto;
+}
+
+/* Styles for the button */
+.button_1 {
+    background-color: transparent;
+    border: 2px solid transparent; /* Set initial border as transparent */
+    border-image: linear-gradient(to right, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5);
+    border-image-slice: 1;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.button_1 a {
+    text-decoration: none;
+}
+
+.button_2 {
+    background-color: #301D2B;
+    border: 2px solid transparent; /* Set initial border as transparent */
+    border-image: linear-gradient(to right, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5);
+    border-image-slice: 1;
+    color: white;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 25%;
+    cursor: pointer;
+}
+
+
+/* Styles for the footer */
+footer {
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.box {
+    width: 350px;
+    height: 250px;
+    background-color: #fff;
+    margin: 20px auto;
+}
+
+.box span {
+    background: transparent;
+    color: #54616C;
+}
+
+.span_1 {
+    font-size: 14px;
+}
+
+.span_2 {
+    font-size: 12px;
+}
+
+.box1 {
+    margin-top: 15%;
+    right: 60%;
+    position: relative;
+    border-radius: 30px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.box2 {
+    left: 75%;
+    position: relative;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+#fileInput {
+  display: none; /* Hide the input element */
+}
+
+.hidden {
+    display: none;
+}
+
+.selected-image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px; /* Adjust margin as needed */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.upload-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.upload-container {
+    text-align: center;
+}
+
+.upload-section {
+    display: flex;
+    align-items: center;
+}
+
+.text-container {
+    margin-right: 25%;
+    margin-top: -17%;
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 30px;
+}
+
+.image-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image-container {
+  max-width: 80%; /* Adjust the maximum width of the image container */
+  margin-bottom: 20px; /* Add margin at the bottom to separate the image and the button */
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 80vh;
+}
+.change_button {
+    background-color: #301D2B;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5);
+    border-image-slice: 1;
+    color: white;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.button_3 {
+    background-color: #301D2B;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5);
+    border-image-slice: 1;
+    color: white;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px; /* Adjust top margin to separate the button from the image */
+}
+
+.button_4 {
+    background-color: #301D2B;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5);
+    border-image-slice: 1;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 55px; /* Adjust top margin to separate the button from the image */
+}
+
+.dragover {
+    border: 2px dashed #ccc;
+}

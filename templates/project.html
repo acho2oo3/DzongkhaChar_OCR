@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>OCR Upload</title>
+</head>
+<body>
+
+    <section class="hero-banner">
+
+        <!-- Navigation bar -->
+        <nav>
+            <a href="/">Home</a>
+            <a href="/#about">About</a>
+            <a href="/#technology">Technology</a>
+            <a href="/#team">Team</a>
+            <a href="#">Extension</a>
+        </nav>
+    
+        <section class="upload-section" id="uploadSection">
+            <div class="upload-container">
+                <div class="box box1">
+                </div>
+                <form class="box box2" action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file" accept="image/*" onchange="displayImage(event)" class="button_4">
+                    <button type="submit" class="button_3">Upload</button>
+                    <br>
+                    <span class="span_1">or drop a file,</span>
+                    <br>
+                    <span class="span_2">Paste Image or URL (5mb)</span>
+                </form>
+            </div>
+        </section>                
+    </section>
+
+<script>
+    function displayImage(event) {
+        var selectedImage = event.target.files[0];
+        var reader = new FileReader();
+        reader.onload = function(){
+            var img = document.createElement("img");
+            img.src = reader.result;
+            img.style.maxWidth = '100%';
+            img.style.maxHeight = '100%';
+            var box1 = document.querySelector('.box1');
+            box1.innerHTML = '';
+            box1.appendChild(img);
+        }
+        reader.readAsDataURL(selectedImage);
+    }
+</script>
+
+</body>
+</html>
