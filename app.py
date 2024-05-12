@@ -15,7 +15,10 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 # Load the OCR model
 model_path = 'dzongkha_trail2.h5'
-model = load_model(model_path)
+try:
+    model = load_model(model_path)
+except Exception as e:
+    print(f"Error loading model: {e}")
 
 # Define Dzongkha words mapping
 dzongkha_words = {
@@ -56,11 +59,11 @@ def upload_file():
             extracted_text = perform_ocr(filepath)
             # Empty the upload folder after OCR
             empty_upload_folder()
-            return render_template('result.html', extracted_text=extracted_text)
+            return render_template('result.html', result=extracted_text)
         except Exception as e:
             # Empty the upload folder in case of error
             empty_upload_folder()
-            return f'Error: {str(e)}'
+            return f'Error performing OCR: {str(e)}'
 
     return 'Invalid file format'
 
